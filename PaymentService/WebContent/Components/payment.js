@@ -8,6 +8,8 @@ $(document).ready(function() {
 	$('#cardNo').attr('maxlength', 16);
 	
 	$('#cvc').attr('maxlength', 3);
+	
+	
 	//space by 4 digits
 /*	IT17186216_COORAY B C R M
 *//*	$('#cardNo').on('keypress change', function () {
@@ -143,7 +145,7 @@ function onItemDeleteComplete(response, status) {
 	if ($("#nameOnCard").val().trim() == "") {
 		return "Insert the Name on Card.";
 	}
-
+	
 	// EXP date
 	if ($("#expDate").val().trim() == "") {
 		return "Insert Expiry Date.";

@@ -31,7 +31,18 @@
       date_input.datepicker(options);
     })
 </script>
-
+<script language="javascript" type="text/javascript">
+function pulsar(e,obj) {
+  tecla = (document.all) ? e.keyCode : e.which;
+  //alert(tecla);
+  if (tecla!="8" && tecla!="0"){
+  	obj.value += String.fromCharCode(tecla).toUpperCase();
+  	return false;
+  }else{
+  	return true;
+  }
+}
+</script>
 
 </head>
 <body background="images/card.jpg">
@@ -49,7 +60,7 @@
 				<br>
 				 
 				<b>Name on Card:</b>
-				<input id="nameOnCard" name="nameOnCard" type="text" placeholder="Enter Card Holder's Name" class="form-control form-control-sm">
+				<input id="nameOnCard" name="nameOnCard" type="text" onkeypress="return pulsar(event,this)" placeholder="Enter Card Holder's Name" class="form-control form-control-sm">
 				<br>
 				
 				<b>Expiry Date:</b>
@@ -61,6 +72,7 @@
 				<br>
 				
 				<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary">
+				<a href="payment.jsp" class="btn1 btn danger" onclick="" type ="button" style="text-align: center">Clear</a>
 				<input type="hidden" id="hidItemIDSave" name="hidItemIDSave" value="">
 			</form>
 			
