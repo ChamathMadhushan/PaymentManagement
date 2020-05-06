@@ -1,3 +1,5 @@
+/*IT17186216_COORAY B C R M
+*/
 package com;
 
 import java.sql.Connection;
@@ -24,6 +26,9 @@ public class Payment {
 		return con;
 	}
 	
+	/*
+	 * IT17186216_COORAY B C R M read payment
+	 */	
 	public String readPayment()
 	{
 		String output = "";
@@ -88,7 +93,9 @@ public class Payment {
 	}
 
 	
-	
+	/*
+	 * IT17186216_COORAY B C R M insert payment
+	 */	
 	public String insertPayment(String cardNo, String nameOnCard, String expDate, String cvc)
 	{
 		String output = "";
@@ -130,7 +137,9 @@ public class Payment {
 	}
 	
 	
-	
+	/*
+	 * IT17186216_COORAY B C R M update payment
+	 */	
 	public String updatePayment(String pamentID, String cardNo, String nameOnCard, String expDate, String cvc)
 	{
 		String output = "";
@@ -172,7 +181,9 @@ public class Payment {
 	}
 	
 	
-	
+	/*
+	 * IT17186216_COORAY B C R M delete payment
+	 */	
 	public String deletePayment(String pamentID)
 	{
 		String output = "";

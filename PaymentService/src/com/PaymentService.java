@@ -16,7 +16,7 @@ public class PaymentService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	Payment payObj = new Payment();
 
-	/**
+	/**IT17186216_COORAY B C R M
 	 * @see HttpServlet#HttpServlet()
 	 */
 	public PaymentService() {
@@ -24,7 +24,7 @@ public class PaymentService extends HttpServlet {
 		// TODO Auto-generated constructor stub
 	}
 
-	/**
+	/**IT17186216_COORAY B C R M
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
@@ -47,7 +47,7 @@ public class PaymentService extends HttpServlet {
 		response.getWriter().write(output);
 	}
 
-	/**
+	/**IT17186216_COORAY B C R M
 	 * @see HttpServlet#doPut(HttpServletRequest, HttpServletResponse)
 	 */
 	protected void doPut(HttpServletRequest request, HttpServletResponse response)
@@ -62,7 +62,7 @@ public class PaymentService extends HttpServlet {
 	}
 
 	/**
-	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
+	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)IT17186216_COORAY B C R M
 	 */
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -74,7 +74,7 @@ public class PaymentService extends HttpServlet {
 		response.getWriter().write(output);
 	}
 
-	// Convert request parameters to a Map
+	// Convert request parameters to a Map IT17186216_COORAY B C R M
 	private static Map getParasMap(HttpServletRequest request) {
 		Map<String, String> map = new HashMap<String, String>();
 
