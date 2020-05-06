@@ -9,8 +9,8 @@ $(document).ready(function() {
 	
 	$('#cvc').attr('maxlength', 16);
 	//space by 4 digits
-	
-/*	$('#cardNo').on('keypress change', function () {
+/*	IT17186216_COORAY B C R M
+*//*	$('#cardNo').on('keypress change', function () {
 		  $(this).val(function (index, value) {
 			  return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
 		  });
@@ -18,15 +18,15 @@ $(document).ready(function() {
 	
 });
 
-// SAVE ============================================
+// SAVE IT17186216_COORAY B C R M
 $(document).on("click", "#btnSave", function(event) {
-	// Clear alerts---------------------
+	// Clear alerts
 	$("#alertSuccess").text("");
 	$("#alertSuccess").hide();
 	$("#alertError").text("");
 	$("#alertError").hide();
 
-	// Form validation-------------------
+	// Form validation
 	var status = validateItemForm();
 
 	if (status != true) {
@@ -35,7 +35,7 @@ $(document).on("click", "#btnSave", function(event) {
 		return;
 	}
 
-	// If valid------------------------
+	// If valid
 	var method = ($("#hidItemIDSave").val() == "") ? "POST" : "PUT";
 
 	$.ajax({
@@ -49,7 +49,7 @@ $(document).on("click", "#btnSave", function(event) {
 	});
 });
 
-// UPDATE==========================================
+// UPDATE  IT17186216_COORAY B C R M
 $(document).on(
 		"click",
 		".btnUpdate",
@@ -117,8 +117,8 @@ function onItemDeleteComplete(response, status) {
 		$("#alertError").show();
 	}
 }
-
-function validateItemForm() {
+/*IT17186216_COORAY B C R M
+*/function validateItemForm() {
 	// Card Number
 	if ($("#cardNo").val().trim() == "") {
 		return "Insert Card Number.";

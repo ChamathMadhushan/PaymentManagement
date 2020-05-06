@@ -1,4 +1,6 @@
-<%@page import="com.Payment"%>
+<!-- IT17186216_COORAY B C R M
+ -->
+ <%@page import="com.Payment"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -48,7 +50,7 @@
 				<br>
 				
 				Expiry Date:
-				<input id="expDate" name="expDate" type="text" placeholder="Select Montha & Year" class="form-control form-control-sm">
+				<input id="expDate" name="expDate" type="text" placeholder="Select Month & Year" class="form-control form-control-sm">
 				<br>
 				 
 				CVC Number:
@@ -75,3 +77,4 @@
 </div>
 </body>
 </html>
+<!-- IT17186216_COORAY B C R M -->
