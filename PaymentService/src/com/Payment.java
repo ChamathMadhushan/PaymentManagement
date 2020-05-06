@@ -8,11 +8,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class Payment {
+public class Payment 
+{
+
 	private Connection connect()
 	{
 		Connection con = null;
-		
 		try
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -39,15 +40,15 @@ public class Payment {
 			
 			if (con == null)
 			{
-				return "Error while connecting to the database for reading.";
+				return "Can not connect to the database.";
 			}
 			
 			// Prepare the html table to be displayed
-			output = "<table border='1'>"
+			output = "<table border='2'>"
 					+ "<tr><th>Card Number</th>"
-					+ "<th>Name On Carde</th>"
+					+ "<th>Name On Card</th>"
 					+ "<th>Expiry Date</th>"
-					+ "<th>CVC Number</th>"
+					+ "<th>CVV No</th>"
 					+ "<th>Update</th>"
 					+ "<th>Remove</th></tr>";
 	

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/PaymentService")
 public class PaymentService extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
 	Payment payObj = new Payment();
 
@@ -24,10 +25,9 @@ public class PaymentService extends HttpServlet {
 		// TODO Auto-generated constructor stub
 	}
 
-	/**IT17186216_COORAY B C R M
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
+	/*
+	 * IT17186216_COORAY B C R M
+	 */	 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -56,7 +56,7 @@ public class PaymentService extends HttpServlet {
 		Map paras = getParasMap(request);
 
 		String output = payObj.updatePayment(paras.get("hidItemIDSave").toString(), paras.get("cardNo").toString(),
-				paras.get("nameOnCard").toString(), paras.get("expDate").toString(), paras.get("cvc").toString());
+				paras.get("nameOnCard").toString().replace("+"," "), paras.get("expDate").toString(), paras.get("cvc").toString());
 
 		response.getWriter().write(output);
 	}

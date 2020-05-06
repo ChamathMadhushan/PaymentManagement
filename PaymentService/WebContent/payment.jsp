@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Payment Management</title>
+<title>Payment_Management_IT17186216</title>
 
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery-3.2.1.min.js"></script>
@@ -32,29 +32,32 @@
     })
 </script>
 
+
 </head>
-<body>
+<body background="images/card.jpg">
+
 <div class="container">
 	<div class="row">
+	
 		<div class="col-6">
-			<h1>Payment Management</h1>
-			
+			<h1><b>Payment Management</b></h1>
+			<br>
 			<form id="paymentForm" name="paymentForm" method="post" action="payment.jsp">
 
-				Card Number:
-				<input id="cardNo" name="cardNo" type="text" class="form-control form-control-sm">
+				<b>Card Number:</b>
+				<input id="cardNo" name="cardNo" type="text" placeholder="Enter Card Number" class="form-control form-control-sm">
 				<br>
 				 
-				Name on Card:
-				<input id="nameOnCard" name="nameOnCard" type="text" class="form-control form-control-sm">
+				<b>Name on Card:</b>
+				<input id="nameOnCard" name="nameOnCard" type="text" placeholder="Enter Card Holder's Name" class="form-control form-control-sm">
 				<br>
 				
-				Expiry Date:
+				<b>Expiry Date:</b>
 				<input id="expDate" name="expDate" type="text" placeholder="Select Month & Year" class="form-control form-control-sm">
 				<br>
 				 
-				CVC Number:
-				<input id="cvc" name="cvc" type="text" class="form-control form-control-sm">
+				<b>CVV Number:</b>
+				<input id="cvc" name="cvc" type="text" placeholder="Enter CVV Number" class="form-control form-control-sm">
 				<br>
 				
 				<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary">
@@ -64,14 +67,18 @@
 			<div id="alertSuccess" class="alert alert-success"></div>
 			<div id="alertError" class="alert alert-danger"></div>
 			<br>
-
+			
+		</div>
+		
+		<div class="col-10">
 			<div id="divItemsGrid">
 				<%
 					Payment payObj = new Payment();
 					out.print(payObj.readPayment());
 				%>
-			</div>
-			
+		</div>
+		<br>
+						
 		</div>
 	</div>
 </div>

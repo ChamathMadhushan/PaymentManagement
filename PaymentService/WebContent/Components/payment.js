@@ -7,7 +7,7 @@ $(document).ready(function() {
 	
 	$('#cardNo').attr('maxlength', 16);
 	
-	$('#cvc').attr('maxlength', 16);
+	$('#cvc').attr('maxlength', 3);
 	//space by 4 digits
 /*	IT17186216_COORAY B C R M
 *//*	$('#cardNo').on('keypress change', function () {
