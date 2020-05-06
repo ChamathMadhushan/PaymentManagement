@@ -4,6 +4,18 @@ $(document).ready(function() {
 	}
 
 	$("#alertError").hide();
+	
+	$('#cardNo').attr('maxlength', 16);
+	
+	$('#cvc').attr('maxlength', 16);
+	//space by 4 digits
+	
+/*	$('#cardNo').on('keypress change', function () {
+		  $(this).val(function (index, value) {
+			  return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
+		  });
+	});*/
+	
 });
 
 // SAVE ============================================
@@ -111,17 +123,19 @@ function validateItemForm() {
 	if ($("#cardNo").val().trim() == "") {
 		return "Insert Card Number.";
 	}
+	
 	// is numerical value
 	var tmpNo = $("#cardNo").val().trim();
-
+	
+	
 	if (!$.isNumeric(tmpNo)) {
 		return "Insert a numerical value for Card Number.";
 	}
 	//length validate
-	if ($("#cardNo").val().length > 5){
+	if ($("#cardNo").val().length > 16){
 		return "The Card Number you entered exceed the length"
 	}
-	if ($("#cardNo").val().length < 5){
+	if ($("#cardNo").val().length < 16){
 		return "The Card Number you entered Doesn't meet the length"
 	}
 	
@@ -130,19 +144,19 @@ function validateItemForm() {
 		return "Insert the Name on Card.";
 	}
 
-	// PRICE-------------------------------
+	// EXP date
 	if ($("#expDate").val().trim() == "") {
 		return "Insert Expiry Date.";
 	}
 
 
-	// DESCRIPTION------------------------
+	// CVC
 	if ($("#cvc").val().trim() == "") {
 		return "Insert CVC Number.";
 	}
 	// is numerical value
 	var tmpCvc = $("#cvc").val().trim();
-
+	$('#cvc').attr('maxlength', 3);
 	if (!$.isNumeric(tmpCvc)) {
 		return "Insert a numerical value for CVC Number.";
 	}
