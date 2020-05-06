@@ -18,7 +18,7 @@
 		<div class="col-6">
 			<h1>Payment Management</h1>
 			
-			<form id="formItem" name="formItem" method="post" action="payment.jsp">
+			<form id="paymentForm" name="paymentForm" method="post" action="payment.jsp">
 
 				Card Number:
 				<input id="cardNo" name="cardNo" type="text" class="form-control form-control-sm">

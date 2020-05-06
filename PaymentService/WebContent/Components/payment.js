@@ -29,7 +29,7 @@ $(document).on("click", "#btnSave", function(event) {
 	$.ajax({
 		url : "PaymentService",
 		type : method,
-		data : $("#formItem").serialize(),
+		data : $("#paymentForm").serialize(),
 		dataType : "text",
 		complete : function(response, status) {
 			onItemSaveComplete(response.responseText, status);
@@ -70,7 +70,7 @@ function onItemSaveComplete(response, status) {
 	}
 
 	$("#hidItemIDSave").val("");
-	$("#formItem")[0].reset();
+	$("#paymentForm")[0].reset();
 }
 
 $(document).on("click", ".btnRemove", function(event) {
@@ -111,6 +111,12 @@ function validateItemForm() {
 	if ($("#cardNo").val().trim() == "") {
 		return "Insert Card Number.";
 	}
+	// is numerical value
+	var tmpNo = $("#cardNo").val().trim();
+
+	if (!$.isNumeric(tmpNo)) {
+		return "Insert a numerical value for Card Number.";
+	}
 	//length validate
 	if ($("#cardNo").val().length > 5){
 		return "The Card Number you entered exceed the length"
@@ -135,10 +141,17 @@ function validateItemForm() {
 		return "Insert CVC Number.";
 	}
 	// is numerical value
-	var tmpDesc = $("#cvc").val().trim();
+	var tmpCvc = $("#cvc").val().trim();
 
-	if (!$.isNumeric(tmpDesc)) {
+	if (!$.isNumeric(tmpCvc)) {
 		return "Insert a numerical value for CVC Number.";
+	}
+	//length validate
+	if ($("#cvc").val().length > 3){
+		return "The CVC Number too long."
+	}
+	if ($("#cvc").val().length < 3){
+		return "The CVC Number too short"
 	}
 
 	return true;
